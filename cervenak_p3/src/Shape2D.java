@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Shape2D {
+abstract class Shape2D extends Shape{
+
 }

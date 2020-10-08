@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Shape3D {
+abstract class Shape3D extends Shape {
 }
