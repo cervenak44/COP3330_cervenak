@@ -29,7 +29,7 @@ public class App {
                 listOperationMenu();
                 break;
             case 2:
-                //loadFile();
+                loadFile();
 
                 break;
             case 3:
@@ -164,7 +164,7 @@ public class App {
         switch (askChoice()) {
             case 1:
 
-                System.out.println();
+                System.out.println(list);
                 listOperationMenu();
                 break;
             case 2:
@@ -178,19 +178,19 @@ public class App {
                 listOperationMenu();
                 break;
             case 4:
-                removeData(data);
+                removeData(list);
                 listOperationMenu();
                 break;
             case 5:
-                markcompleted(data);
+                markcompleted(list);
                 listOperationMenu();
                 break;
             case 6:
-                markUncompleted(data);
+                markUncompleted(list);
                 listOperationMenu();
                 break;
             case 7:
-                saveList(data);
+                //saveList(data);
                 listOperationMenu();
                 break;
 
@@ -205,7 +205,7 @@ public class App {
         //save list
     }
 
-    private void markUncompleted(TaskItem data) {
+    private void markUncompleted(TaskList list) {
         System.out.println("Completed Tasks");
         System.out.println("----------");
 
@@ -214,7 +214,7 @@ public class App {
         //list.unmarkcompleted(data);
     }
 
-    private void markcompleted(TaskItem data) {
+    private void markcompleted(TaskList list) {
         System.out.println("Uncompleted Tasks");
         System.out.println("----------");
 
@@ -225,16 +225,16 @@ public class App {
         //list.markCompleted(data);
     }
 
-    private void removeData(TaskItem data) {
+    private void removeData(TaskList list) {
         System.out.println("Current Tasks");
         System.out.println("---------");
 
-        System.out.println(data);
+        System.out.println(this.list);
 
         System.out.println("Which task to remove:");
         int usrInput = input.nextInt();
 
-        list.remove(usrInput);
+        //list.remove(usrInput);
     }
 
 
