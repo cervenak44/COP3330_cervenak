@@ -9,8 +9,7 @@ public class App {
     private static Scanner input = new Scanner(System.in);
 
     private TaskList list;
-    // Next we will create a more general GradeList and use it to let our program manage both
-    // StudentList and TeachList objects via polymorphism.
+
 
     public App() {
         list = new TaskList();
@@ -41,7 +40,7 @@ public class App {
 
     }
 
-    /*private void loadFile(){
+    private void loadFile(){
 
         String  userInput = " ";
         System.out.println("Enter filename to load:");
@@ -61,7 +60,7 @@ public class App {
 
 
         listOperationMenu();
-    } */
+    }
 
     private void quitManager() {
         System.exit(1);
@@ -164,7 +163,8 @@ public class App {
 
         switch (askChoice()) {
             case 1:
-                System.out.println(list);
+
+                System.out.println();
                 listOperationMenu();
                 break;
             case 2:
@@ -178,19 +178,19 @@ public class App {
                 listOperationMenu();
                 break;
             case 4:
-                removeData();
+                removeData(data);
                 listOperationMenu();
                 break;
             case 5:
-                markcompleted();
+                markcompleted(data);
                 listOperationMenu();
                 break;
             case 6:
-                markUncompleted();
+                markUncompleted(data);
                 listOperationMenu();
                 break;
             case 7:
-                saveList();
+                saveList(data);
                 listOperationMenu();
                 break;
 
@@ -209,20 +209,20 @@ public class App {
         System.out.println("Completed Tasks");
         System.out.println("----------");
 
-        System.out.println(data.completed);
+        //System.out.println(data.completed);
         int usrInput = input.nextInt();
-        list.unmarkcompleted(data);
+        //list.unmarkcompleted(data);
     }
 
     private void markcompleted(TaskItem data) {
         System.out.println("Uncompleted Tasks");
         System.out.println("----------");
 
-        System.out.println(data.uncompleted);
+        //System.out.println(data.uncompleted);
 
         System.out.println("Which task to mark completed:");
         int usrInput = input.nextInt();
-        list.markCompleted(data);
+        //list.markCompleted(data);
     }
 
     private void removeData(TaskItem data) {
@@ -234,6 +234,9 @@ public class App {
         System.out.println("Which task to remove:");
         int usrInput = input.nextInt();
 
-        list.remove(data);
+        list.remove(usrInput);
     }
+
+
+
 }
