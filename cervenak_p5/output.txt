@@ -1,0 +1,5 @@
+1
+false
+[2020-12-02]
+assignment 5
+contact list
